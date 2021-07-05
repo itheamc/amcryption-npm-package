@@ -3,8 +3,6 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 [![Node.js Version][node-image]][node-url]
-[![Build Status][travis-image]][travis-url]
-[![Test Coverage][coveralls-image]][coveralls-url]
 
 Encode and decode your data with amcryption
 
@@ -40,3 +38,10 @@ let encoded_string = decoder.decode('...put your encoded string data here...')
 ## License
 
 [ISC](LICENSE)
+
+[npm-image]: https://img.shields.io/npm/v/amcryption.svg
+[npm-url]: https://npmjs.org/package/amcryption
+[node-image]: https://img.shields.io/node/v/amcryption.svg
+[node-url]: http://nodejs.org/download/
+[downloads-image]: https://img.shields.io/npm/dm/amcryption.svg
+[downloads-url]: https://npmjs.org/package/amcryption
