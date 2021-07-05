@@ -1,0 +1,29 @@
+{
+  "name": "amcryption",
+  "version": "1.2.3",
+  "description": "This is the nodejs encryption package through which you can encrypt or decrypt your data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@mit <itheamc@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itheamc/amcryption-npm-package.git"
+  },
+  "keywords": [
+    "amcryption",
+    "itheamc",
+    "encryption",
+    "decryption"
+  ],
+  "bugs": {
+    "url": "https://github.com/itheamc/amcryption-npm-package/issues"
+  },
+  "homepage": "https://github.com/itheamc/amcryption-npm-package#readme",
+  "dependencies": {
+    "atob": "^2.1.2",
+    "btoa": "^1.2.1"
+  }
+}
