@@ -1,6 +1,6 @@
 {
   "name": "amcryption",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "This is the nodejs encryption package through which you can encrypt or decrypt your data.",
   "main": "index.js",
   "scripts": {
