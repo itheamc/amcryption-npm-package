@@ -60,8 +60,7 @@ let decoded_email = decoder.decode('bllNbFdPeElDSC56dkdFekxvdlBrbllNQXpLblhjdkdF
 ```
 
 ## License
-amcryption - a encoding and decoding module for node js project
-Copyright(c) 2021 @mit <itheamc@gmail.com>
+Copyright(c) 2021 Amit <itheamc@gmail.com>
 [ISC](LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/amcryption.svg
