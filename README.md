@@ -4,7 +4,7 @@
 [![NPM Downloads][downloads-image]][downloads-url]
 [![Node.js Version][node-image]][node-url]
 
-Amcryption is a npm package that will help you to make your data more secure by encoding it with custom encoder as well as Base64 encoder at the same time. Since the data is encoded with our custom as well as Base64 encoder it will be hard to decode it.
+Amcryption is a npm package that will help you to make your data more secure by encoding it with custom encoder as well as Base64 encoder at the same time. Since the data is encoded with our custom as well as Base64 encoder it will be hard to decode it. In version 1.2.8 we have also added the encryption and decryption method using the crypto.
 
 ## Installation
 
@@ -27,18 +27,18 @@ const amcryption = require('amcryption')
 const amcryption = require('amcryption')
 
 /*
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+-----------------------------------------------------------------------------------
 -=-=-=-=-=-=-= Creating the instance of the Encoder and Decoder class-=-=-=-=-=-=-=
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+------------------------- For Simple Encoding and Decoding-------------------------
+-----------------------------------------------------------------------------------
 */
 const encoder = amcryption.getEncoder()
 const decoder = amcryption.getDecoder()
 
 
 /*
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=ENCODING THE DATA=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+-----------------------------------------------------------------------------------
+ENCODING THE DATA
 */
 let encoded_string = encoder.encode('...put your string data here...')
 
@@ -47,9 +47,8 @@ let encoded_email = encoder.encode('example@email.com')
 // Encoded value will be =>  bllNbFdPeElDSC56ekxvckNJQXpLbllNdkdFSEB6dkdFekxvdlBrbllNQXpLblhjdkdF
 
 /*
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=DECODING THE DATA=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+-----------------------------------------------------------------------------------
+DECODING THE DATA
 */
 let decoded_string = decoder.decode('...put your encoded string data here...')
 
@@ -57,10 +56,29 @@ let decoded_string = decoder.decode('...put your encoded string data here...')
 let decoded_email = decoder.decode('bllNbFdPeElDSC56dkdFekxvdlBrbllNQXpLblhjdkdFSEB6bFphYk1Zblhj')
 // Decoded value will be => xyz@example.com
 
+
+
+/*
+-----------------------------------------------------------------------------------
+-=-=-=-=-=-=-=-=-=-= Creating the instance of the Crypto class-=-=-=-=-=-=-=-=-=-=
+----------------- For encrypting and decrypting data using crypto-----------------
+-----------------------------------------------------------------------------------
+*/
+const crypto = amcryption.getCrypto()
+
+// For Encryption
+let encrypted_text = crypto.encrypt('--Your Text--')
+
+// For Decryption
+let decrypted_text = crypto.decrypt('--Encrypted text--')
+
+
 ```
 
 ## License
-Copyright(c) 2021 Amit <itheamc@gmail.com>
+Copyright(c) 2021 Amit 
+<itheamc@gmail.com>
+
 [ISC](LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/amcryption.svg
